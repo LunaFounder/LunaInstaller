@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Luna Founder — Hey Luna AI</title>
+<style>
+:root{--bg:#0b0920;--panel:#16112f;--line:#5b3f9e;--pink:#e58cff;--cyan:#77ffe2;--text:#fbf4ff;--muted:#c5b9dc}
+*{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 80% 20%,#2b1458 0,#0b0920 48%,#060512 100%);color:var(--text);font-family:Inter,Segoe UI,sans-serif;min-height:100vh}
+.container{max-width:1100px;margin:auto;padding:22px}.nav{display:flex;justify-content:space-between;align-items:center;padding:10px 0 22px}.logo{font-weight:800;font-size:22px;color:#fff}.pill{border:1px solid #6745ae;background:#1a1337;padding:8px 13px;border-radius:999px;color:#eadcff;font-size:13px}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}.copy h1{font-size:58px;line-height:.95;margin:0 0 14px;color:#f5d7ff}.copy h2{margin:0 0 18px;font-size:24px}.copy p{color:var(--muted);font-size:17px;line-height:1.6}.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{border:1px solid var(--line);background:#24175a;color:#fff;text-decoration:none;padding:14px 18px;border-radius:13px;font-weight:800;display:inline-flex;align-items:center;gap:8px}.btn.free{background:linear-gradient(90deg,#7d67e8,#8f72ff)}.btn.premium{background:linear-gradient(90deg,#cc6bff,#f184d4)}.btn:hover{filter:brightness(1.08)}
+.card{background:linear-gradient(180deg,rgba(28,20,59,.88),rgba(14,11,31,.9));border:1px solid #3a2a68;border-radius:20px;padding:18px}.preview{position:relative;min-height:520px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}.preview:before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,#a46cff33 0,#7af7df18 38%,transparent 70%);filter:blur(12px)}.chibi{position:relative;width:min(100%,430px);animation:bob 2.8s ease-in-out infinite;filter:drop-shadow(0 18px 30px #0007)}.chibi:hover{animation:turn 1.2s ease-in-out}.status{position:absolute;right:18px;bottom:18px;border:1px solid #5debc7;background:#0a1220dd;padding:9px 12px;border-radius:999px;color:var(--cyan);font-weight:800;backdrop-filter:blur(8px)}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}.feature h3{margin:4px 0 7px}.feature p{color:var(--muted);margin:0;line-height:1.5}.versions{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}.price{font-size:34px;font-weight:900;margin:9px 0}.stripe{margin-top:18px;border-color:#5e4c93}.tiny{font-size:12px;color:#9f93b6}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-8px) rotate(1deg)}}@keyframes turn{0%,100%{transform:translateX(0) rotate(-2deg)}50%{transform:translateX(5px) rotate(2deg)}}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.copy h1{font-size:44px}.features,.versions{grid-template-columns:1fr}.preview{min-height:420px}}
+</style>
+<style>
+.luna-earnings{margin:28px auto;padding:22px;max-width:900px;border-radius:18px;background:rgba(20,15,45,.78);border:1px solid rgba(170,120,255,.35);box-shadow:0 10px 35px rgba(0,0,0,.18);font-family:system-ui,sans-serif}
+.luna-earnings h2{margin:0 0 14px}.luna-earnings-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.luna-earnings-grid div{padding:16px;border-radius:14px;background:rgba(255,255,255,.06)}.luna-earnings-grid strong,.luna-earnings-grid span{display:block}.luna-earnings-grid strong{font-size:1.45rem}.luna-earnings-grid span{opacity:.72;margin-top:4px}.luna-earnings-note{opacity:.7;font-size:.9rem}@media(max-width:650px){.luna-earnings-grid{grid-template-columns:1fr}}
+</style>
+
+</head>
+<body><div class="container">
+<div class="nav"><div class="logo">🌙 Luna Founder</div><div class="pill">Hey Luna AI • Chibi VTuber</div></div>
+<section class="hero"><div class="copy"><div class="pill" style="display:inline-block;margin-bottom:14px">Small chibi. Big personality.</div><h1>Luna 💜</h1><h2>Your animated AI companion.</h2><p>Luna listens for <b>“Hey Luna AI”</b>, shows live listening and speaking states, and features a chibi VTuber-style companion that moves, blinks, talks, and reacts while the assistant runs.</p><div class="cta"><a class="btn free" href="downloads/downloads/Luna_General.zip" onclick="recordGeneralDownload()">⬇ Install General <span>Free</span></a><a class="btn premium" id="premiumBtn" href="#">👑 Install Premium <span>$9.99</span></a></div><div class="tiny" style="margin-top:10px">Premium checkout uses Stripe Payment Links.</div></div>
+<div class="card preview"><img class="chibi" src="assets/luna_chibi_vtuber.png" alt="Luna chibi character"><div class="status">🎙 I’m listening...</div></div></section>
+<div class="features"><div class="card feature"><h3>🎙 Voice</h3><p>Wake phrase: Hey Luna AI. Live listening and speaking indicators.</p></div><div class="card feature"><h3>💜 Chibi VTuber</h3><p>Idle bobbing, gentle turns, blinking, talking-mouth motion, and state glows.</p></div><div class="card feature"><h3>✨ States</h3><p>Standby, Listening, Speaking, Thinking, Confirm, and Error.</p></div></div>
+<div class="versions"><div class="card"><h2>General</h2><div class="price">Free</div><p>Core Luna assistant with the animated chibi companion.</p><a class="btn free" href="downloads/downloads/Luna_General.zip" onclick="recordGeneralDownload()">Install General</a></div><div class="card stripe"><h2>Premium</h2><div class="price">$9.99</div><p>Full Premium Luna edition.</p><a class="btn premium" id="premiumBtn2" href="#">Install Premium</a><div class="tiny" style="margin-top:8px">Stripe checkout opens securely in a new page.</div></div></div>
+</div>
+<script src="stripe-config.js"></script><script>
+function setup(){const link=window.STRIPE_PAYMENT_LINK||''; for(const id of ['premiumBtn','premiumBtn2']){const b=document.getElementById(id); b.addEventListener('click',e=>{e.preventDefault(); if(!link||link.includes('PASTE_YOUR')){alert('Add your Stripe Payment Link to stripe-config.js first.');return;} window.location.href=link;});}}
+setup();
+</script>
+<section class="luna-earnings" aria-label="Luna earnings tracker">
+<h2>Luna Earnings Tracker</h2>
+<div class="luna-earnings-grid">
+<div><strong data-luna-pending>$0.00</strong><span>Pending sales</span></div>
+<div><strong data-luna-premium-sales>0</strong><span>Premium sales</span></div>
+<div><strong data-luna-general-downloads>0</strong><span>General downloads</span></div>
+</div>
+<p class="luna-earnings-note">Test sales are tracked on this device until real payments are enabled.</p>
+</section>
+
+<script src="luna-sales-ledger.js"></script>
+</body></html>
